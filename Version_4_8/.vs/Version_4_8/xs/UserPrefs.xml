@@ -1,0 +1,29 @@
+﻿<Properties StartupConfiguration="{8F60BA7E-0B0A-4275-BDF6-76EC26AE2235}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Version_4_8/Version_4_8/Views/ItemsPage.xaml">
+    <Files>
+      <File FileName="Version_4_8/Version_4_8/Views/GradientsAndBrushesPage.xaml" Line="7" Column="1" />
+      <File FileName="Version_4_8/Version_4_8/App.xaml.cs" />
+      <File FileName="Version_4_8/Version_4_8/Views/GradientsAndBrushesPage.xaml.cs" />
+      <File FileName="Version_4_8/Version_4_8/AppShell.xaml" />
+      <File FileName="Version_4_8/Version_4_8/Views/DragAndDropPage.xaml" />
+      <File FileName="Version_4_8/Version_4_8/ViewModels/BaseViewModel.cs" />
+      <File FileName="Version_4_8/Version_4_8/ViewModels/ItemsViewModel.cs" />
+      <File FileName="Version_4_8/Version_4_8/Views/ItemsPage.xaml" Line="25" Column="15" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Version_4_8" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Version__4__8.iOS PreferredExecutionTarget="MonoDevelop.IPhone.IPhoneSimulatorTarget.99FF82AA-52A4-4CD7-A77E-94AAEDC0D542" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|iPhoneSimulator" />
+  <MonoDevelop.Ide.ItemProperties.Version__4__8.Android PreferredExecutionTarget="Android.Android_Accelerated_Oreo" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
