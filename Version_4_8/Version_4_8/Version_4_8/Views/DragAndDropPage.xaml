@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Drag And Drop"
+             x:Class="Version_4_8.Views.DragAndDropPage">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*, *" RowDefinitions="200, *">
+            <Image HeightRequest="100" WidthRequest="100" Source="Catmeme1.jfif">
+                <Image.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True"/>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Grid.Column="1" HeightRequest="100" WidthRequest="100" Source="Catmeme2.jfif">
+                <Image.GestureRecognizers>
+                    <DragGestureRecognizer CanDrag="True"/>
+                </Image.GestureRecognizers>
+            </Image>
+
+            <Image Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="LightSkyBlue">
+                <Image.GestureRecognizers>
+                    <DropGestureRecognizer AllowDrop="True"/>
+                </Image.GestureRecognizers>
+            </Image>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

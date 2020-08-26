@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             Title="Gradients And Brushes"
+             x:Class="Version_4_8.Views.GradientsAndBrushesPage">
+
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="TextColor" Value="White"/>
+            <Setter Property="FontAttributes" Value="Bold"/>
+            <Setter Property="VerticalOptions" Value="Center"/>
+            <Setter Property="HorizontalOptions" Value="Center"/>
+        </Style>
+        <Style TargetType="Frame">
+            <Setter Property="BorderColor" Value="LightGray"/>
+            <Setter Property="HasShadow" Value="True"/>
+            <Setter Property="CornerRadius" Value="12"/>
+            <Setter Property="HeightRequest" Value="120"/>
+            <Setter Property="WidthRequest" Value="120"/>
+        </Style>
+
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout Margin="20" Spacing="20">
+            <Frame Background="Red">
+                <Label Text="Without Brush"/>
+            </Frame>
+
+            <Frame>
+                <Frame.Background>
+                    <SolidColorBrush Color="Green"/>
+                </Frame.Background>
+                <Label Text="SolidColorBrush"/>
+            </Frame>
+
+            <Frame>
+                <Frame.Background>
+                    <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                        <GradientStop Color="Yellow" Offset="0.0"/>
+                        <GradientStop Color="Red" Offset="0.25"/>
+                        <GradientStop Color="Blue" Offset="0.75"/>
+                        <GradientStop Color="LimeGreen" Offset="1.0"/>
+                    </LinearGradientBrush>
+                </Frame.Background>
+                <Label Text="LinearGradientBrush"/>
+            </Frame>
+
+            <Frame>
+                <Frame.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Color="Yellow" Offset="0.0"/>
+                        <GradientStop Color="Red" Offset="0.25"/>
+                        <GradientStop Color="Green" Offset="0.75"/>
+                        <GradientStop Color="Black" Offset="1.0"/>
+                    </RadialGradientBrush>
+                </Frame.Background>
+                <Label Text="RadialGradientBrush"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
