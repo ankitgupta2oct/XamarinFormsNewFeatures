@@ -2,10 +2,14 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:viewmodels="clr-namespace:Version_4_8.ViewModels"
              mc:Ignorable="d"
              Title="Gradients And Brushes"
              x:Class="Version_4_8.Views.GradientsAndBrushesPage">
+
+    <ContentPage.BindingContext>
+        <viewmodels:GradientsAndBrushesViewModel/>
+    </ContentPage.BindingContext>
 
     <ContentPage.Resources>
         <Style TargetType="Label">
@@ -23,20 +27,21 @@
         </Style>
 
     </ContentPage.Resources>
+
     <ContentPage.Content>
-        <StackLayout Margin="20" Spacing="20">
+        <Grid RowDefinitions="*,*,*,*,Auto" Margin="20" RowSpacing="20">
             <Frame Background="Red">
                 <Label Text="Without Brush"/>
             </Frame>
 
-            <Frame>
+            <Frame Grid.Row="1">
                 <Frame.Background>
                     <SolidColorBrush Color="Green"/>
                 </Frame.Background>
                 <Label Text="SolidColorBrush"/>
             </Frame>
 
-            <Frame>
+            <Frame Grid.Row="2">
                 <Frame.Background>
                     <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
                         <GradientStop Color="Yellow" Offset="0.0"/>
@@ -48,7 +53,7 @@
                 <Label Text="LinearGradientBrush"/>
             </Frame>
 
-            <Frame>
+            <Frame Grid.Row="3">
                 <Frame.Background>
                     <RadialGradientBrush>
                         <GradientStop Color="Yellow" Offset="0.0"/>
@@ -59,6 +64,8 @@
                 </Frame.Background>
                 <Label Text="RadialGradientBrush"/>
             </Frame>
-        </StackLayout>
+
+            <Button Grid.Row="4" Text="Animate Gradient" HorizontalOptions="Center" Command="{Binding AnimateGradientCommand}"/>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
